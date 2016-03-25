@@ -13,7 +13,7 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+
 
 Route::get('/',function () {
     return view('welcome');
@@ -30,3 +30,21 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+ Route::get('home', 'HomeController@code');
+    
+    route::get('dashboard','HomeController@test');
+    Route::get('contact','HomeController@contact');
+    Route::get('share','HomeController@share');
+    Route::get('preview','HomeController@preview');
+
+    Route::get('/preview2','HomeController@preview2');
+    Route::get('/write', 'HomeController@write');
+    Route::post('testjson','AjaxController@ajaxResponse');
+
+    Route::post('createjs','AjaxController@jsCreator');
+
+    Route::get('Embedcode',function(){
+    return view('embedcode');
+    });
+    
